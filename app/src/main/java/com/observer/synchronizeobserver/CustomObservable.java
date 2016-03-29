@@ -9,13 +9,13 @@ public class CustomObservable {
 
     private Vector<CustomObserver> observers = new Vector<>();
 
-    public void addObserver(CustomObserver observer) {
+    public synchronized void addObserver(CustomObserver observer) {
         if (!observers.contains(observer)) {
             observers.add(observer);
         }
     }
 
-    public void removeObserver(CustomObserver observer) {
+    public synchronized void removeObserver(CustomObserver observer) {
         observers.remove(observer);
     }
 
