@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final CustomObservable observable = new CustomObservable();
+        final CustomObservable2 observable = new CustomObservable2();
         addObserver(observable);
         addObserver(observable);
         addObserver(observable);
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private CustomObserver addObserver(CustomObservable observable) {
+    private CustomObserver addObserver(CustomObservable2 observable) {
         CustomObserver customObserver = new CustomObserver() {
             @Override
             public void receive(String message) {
